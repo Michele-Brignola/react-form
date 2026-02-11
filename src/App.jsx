@@ -1,11 +1,19 @@
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./css/index.css";
+
+const articles = ["Articolo1", "Articolo2", "Articolo3"];
+
 export default function App() {
   return (
-    <>
-      <h1>Layout</h1>
+    <div className="container">
+      <h1>Articoli</h1>
       <ul>
-        <li>React</li>
-        <li>Bootstrap</li>
+        {articles.map((article, index) => (
+          <li key={index}>
+            {article}
+          </li>
+        ))}
       </ul>
-    </>
+    </div>
   );
 }
